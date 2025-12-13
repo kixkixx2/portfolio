@@ -1950,6 +1950,211 @@ section {
     transition: width 1.5s ease-out;
 }
 
+/* ==================== PROJECTS SECTION ==================== */
+.projects {
+    background: var(--bg-darker);
+}
+
+.projects-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(0, 245, 212, 0.1);
+}
+
+.project-image {
+    position: relative;
+    height: 250px;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-icon-large {
+    font-size: 5rem;
+    color: var(--primary);
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-icon-large {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+    transform: scale(1.1);
+}
+
+.project-link i {
+    font-size: 2rem;
+}
+
+.project-content {
+    padding: var(--space-lg);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.project-tags .tag {
+    background: rgba(0, 245, 212, 0.1);
+    color: var(--primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: var(--fs-xs);
+    font-weight: 500;
+}
+
+.project-title {
+    font-size: var(--fs-xl);
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+.project-description {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.algorithm-info {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+    border-left: 3px solid var(--primary);
+}
+
+.algo-item {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.algo-item:last-child {
+    margin-bottom: 0;
+}
+
+.algo-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 245, 212, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.algo-icon i {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.algo-text h4 {
+    font-size: var(--fs-sm);
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.algo-text p {
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.project-tech span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--text-secondary);
+    font-size: var(--fs-xs);
+}
+
+.project-tech i {
+    color: var(--primary);
+}
+
+.project-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Projects Mobile */
+@media (max-width: 768px) {
+    .project-image {
+        height: 180px;
+    }
+    
+    .project-icon-large {
+        font-size: 3.5rem;
+    }
+    
+    .algo-item {
+        flex-direction: column;
+    }
+    
+    .algo-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
 /* ==================== CONTACT SECTION ==================== */
 .contact {
     background: var(--bg-darker);
