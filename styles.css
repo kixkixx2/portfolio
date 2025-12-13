@@ -417,15 +417,18 @@ button {
 .scroll-down-hint {
     position: absolute;
     top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: fit-content;
     font-size: var(--fs-lg);
     color: var(--primary);
     text-align: center;
     animation: bounce-down 1.5s ease-in-out infinite;
-    text-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
-    letter-spacing: 2px;
-    z-index: 10;
+    text-shadow: 0 0 15px rgba(0, 245, 212, 0.8);
+    letter-spacing: 3px;
+    z-index: 9999;
+    font-weight: 600;
 }
 
 @keyframes bounce-down {
