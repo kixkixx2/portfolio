@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Jastin Lamug - Creative Developer & Designer Portfolio">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Jastin Lamug | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Intro Screen - 3D Rotating Text -->
+    <div class="intro-screen" id="intro">
+        <div class="intro-bg">
+            <div class="grid-overlay"></div>
+            <div class="cyber-lines">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="data-streams">
+                <div class="stream stream-1"></div>
+                <div class="stream stream-2"></div>
+                <div class="stream stream-3"></div>
+            </div>
+        </div>
+        <div class="intro-content">
+            <div class="logo-3d-container">
+                <div class="logo-3d" id="logo3d">
+                    <div class="logo-face front">&lt;jstn/&gt;</div>
+                    <div class="logo-face back">&lt;jstn/&gt;</div>
+                    <div class="logo-face right">&lt;jstn/&gt;</div>
+                    <div class="logo-face left">&lt;jstn/&gt;</div>
+                    <div class="logo-face top">&lt;jstn/&gt;</div>
+                    <div class="logo-face bottom">&lt;jstn/&gt;</div>
+                </div>
+            </div>
+            <p class="intro-tagline">Creative Developer & Designer</p>
+            <button class="intro-enter" id="enterBtn">
+                <span class="btn-glitch" data-text="ENTER">ENTER</span>
+                <span class="btn-border"></span>
+            </button>
+            <p class="intro-hint">Click to enter or drag to rotate</p>
+        </div>
+        <div class="intro-particles"></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">&lt;jstn/&gt;</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-text">Loading awesome stuff...</p>
+        </div>
+    </div>
+
+    <!-- Particle canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- 3D Scene Background -->
+    <div class="scene-3d">
+        <div class="floating-cube cube-1">
+            <div class="cube-face front"></div>
+            <div class="cube-face back"></div>
+            <div class="cube-face right"></div>
+            <div class="cube-face left"></div>
+            <div class="cube-face top"></div>
+            <div class="cube-face bottom"></div>
+        </div>
+        <div class="floating-cube cube-2">
+            <div class="cube-face front"></div>
+            <div class="cube-face back"></div>
+            <div class="cube-face right"></div>
+            <div class="cube-face left"></div>
+            <div class="cube-face top"></div>
+            <div class="cube-face bottom"></div>
+        </div>
+        <div class="floating-cube cube-3">
+            <div class="cube-face front"></div>
+            <div class="cube-face back"></div>
+            <div class="cube-face right"></div>
+            <div class="cube-face left"></div>
+            <div class="cube-face top"></div>
+            <div class="cube-face bottom"></div>
+        </div>
+        <div class="floating-pyramid">
+            <div class="pyramid-face face-1"></div>
+            <div class="pyramid-face face-2"></div>
+            <div class="pyramid-face face-3"></div>
+            <div class="pyramid-face face-4"></div>
+        </div>
+        <div class="floating-ring ring-1"></div>
+        <div class="floating-ring ring-2"></div>
+        <div class="floating-sphere"></div>
+    </div>
+
+    <!-- Animated background -->
+    <div class="bg-animation">
+        <div class="grid-lines"></div>
+        <div class="floating-shapes">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="logo-text">&lt;jstn/&gt;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active" data-text="Home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+            <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+            <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="greeting" data-aos="fade-right">
+                    <span class="line"></span>
+                    <span class="text">Hello, I'm</span>
+                </p>
+                <h1 class="name" data-aos="fade-up">
+                    <span class="first-name glitch text-3d" data-text="Jastin">Jastin</span>
+                    <span class="last-name text-3d-gradient">Lamug</span>
+                </h1>
+                <div class="typewriter" data-aos="fade-up" data-aos-delay="200">
+                    <span class="static-text">I'm a </span>
+                    <span class="dynamic-text"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="tagline" data-aos="fade-up" data-aos-delay="300">Crafting digital experiences with passion & precision</p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#contact" class="btn btn-primary magnetic">
+                        <span class="btn-text">Get In Touch</span>
+                        <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                        <span class="btn-glow"></span>
+                    </a>
+                    <a href="#about" class="btn btn-secondary magnetic">
+                        <span class="btn-text">Learn More</span>
+                        <span class="btn-ripple"></span>
+                    </a>
+                </div>
+                <!-- Social Links Mobile -->
+                <div class="hero-socials" data-aos="fade-up" data-aos-delay="500">
+                    <a href="mailto:fanglamug26@gmail.com" class="social-icon magnetic" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.facebook.com/masterjastin.26/" target="_blank" class="social-icon magnetic" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
+                <div class="image-container card-3d" data-tilt>
+                    <div class="image-border"></div>
+                    <div class="image-glow"></div>
+                    <div class="image-rings">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="hologram-effect"></div>
+                    <img src="profile.jpg" alt="Jastin Lamug" class="profile-pic">
+                    <div class="floating-badge pulse">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="floating-badge-2 pulse">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="orbit-ring">
+                        <div class="orbit-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down bounce-arrow"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">&lt;about&gt;</span>
+            <h2 class="section-title">About Me</h2>
+            <div class="title-line"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-image" data-aos="fade-right">
+                <div class="tech-frame" data-tilt data-tilt-max="10">
+                    <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?w=500" alt="Technology" loading="lazy">
+                    <div class="frame-corner top-left"></div>
+                    <div class="frame-corner top-right"></div>
+                    <div class="frame-corner bottom-left"></div>
+                    <div class="frame-corner bottom-right"></div>
+                    <div class="frame-glow"></div>
+                </div>
+            </div>
+            <div class="about-text" data-aos="fade-left">
+                <h3>Who is <span class="highlight text-gradient">jstn</span>?</h3>
+                <p>I'm Jastin Lamug, a creative individual passionate about technology and digital arts. I believe in the power of minimalist design and clean aesthetics to create impactful experiences.</p>
+                <p>My approach combines technical precision with artistic vision, resulting in work that's both functional and beautiful. I'm constantly exploring new technologies and pushing creative boundaries.</p>
+                <div class="about-stats">
+                    <div class="stat" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="stat-icon"><i class="fas fa-paint-brush"></i></div>
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Designs</span>
+                    </div>
+                    <div class="stat" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stat-icon"><i class="fas fa-code"></i></div>
+                        <span class="stat-number" data-target="1000">0</span>
+                        <span class="stat-label">Lines of Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="section-tag closing">&lt;/about&gt;</span>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">&lt;skills&gt;</span>
+            <h2 class="section-title">My Skills</h2>
+            <div class="title-line"></div>
+        </div>
+        <div class="skills-container">
+            <div class="skill-card card-3d" data-aos="fade-up" data-aos-delay="0" data-tilt data-tilt-max="15">
+                <div class="card-3d-inner">
+                    <div class="skill-icon icon-3d">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Development</h3>
+                    <p>Building digital solutions with modern technologies</p>
+                    <div class="skill-tags">
+                        <span class="tag-animate">HTML</span>
+                        <span class="tag-animate">CSS</span>
+                        <span class="tag-animate">JavaScript</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="90"></div>
+                    </div>
+                </div>
+                <div class="card-shine"></div>
+                <div class="card-glow"></div>
+            </div>
+            <div class="skill-card card-3d" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="15">
+                <div class="card-3d-inner">
+                    <div class="skill-icon icon-3d">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Design</h3>
+                    <p>Creating visually stunning and user-friendly interfaces</p>
+                    <div class="skill-tags">
+                        <span class="tag-animate">UI/UX</span>
+                        <span class="tag-animate">Graphics</span>
+                        <span class="tag-animate">Branding</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                    </div>
+                </div>
+                <div class="card-shine"></div>
+                <div class="card-glow"></div>
+            </div>
+            <div class="skill-card card-3d" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="15">
+                <div class="card-3d-inner">
+                    <div class="skill-icon icon-3d">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Creativity</h3>
+                    <p>Innovative thinking and problem-solving approaches</p>
+                    <div class="skill-tags">
+                        <span class="tag-animate">Innovation</span>
+                        <span class="tag-animate">Strategy</span>
+                        <span class="tag-animate">Ideas</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="95"></div>
+                    </div>
+                </div>
+                <div class="card-shine"></div>
+                <div class="card-glow"></div>
+            </div>
+        </div>
+        <span class="section-tag closing">&lt;/skills&gt;</span>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">&lt;contact&gt;</span>
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="title-line"></div>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info" data-aos="fade-right">
+                <h3>Let's Create Something <span class="highlight text-gradient">Amazing</span> Together</h3>
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                <div class="contact-links">
+                    <a href="mailto:fanglamug26@gmail.com" class="contact-link magnetic" data-aos="fade-up" data-aos-delay="100">
+                        <div class="link-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="link-text">
+                            <span class="link-label">Email</span>
+                            <span class="link-value">fanglamug26@gmail.com</span>
+                        </div>
+                        <i class="fas fa-arrow-right link-arrow"></i>
+                    </a>
+                    <a href="https://www.facebook.com/masterjastin.26/" target="_blank" class="contact-link magnetic" data-aos="fade-up" data-aos-delay="200">
+                        <div class="link-icon">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <div class="link-text">
+                            <span class="link-label">Facebook</span>
+                            <span class="link-value">masterjastin.26</span>
+                        </div>
+                        <i class="fas fa-arrow-right link-arrow"></i>
+                    </a>
+                    <a href="tel:+639174572531" class="contact-link magnetic" data-aos="fade-up" data-aos-delay="300">
+                        <div class="link-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="link-text">
+                            <span class="link-label">Phone</span>
+                            <span class="link-value">+63 917 457 2531</span>
+                        </div>
+                        <i class="fas fa-arrow-right link-arrow"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-visual" data-aos="fade-left">
+                <div class="terminal" data-tilt data-tilt-max="5">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <span class="terminal-title">contact.sh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">$</span> <span class="command">whoami</span></p>
+                        <p class="output">jastin_lamug</p>
+                        <p><span class="prompt">$</span> <span class="command">cat contact.txt</span></p>
+                        <p class="output">Email: fanglamug26@gmail.com</p>
+                        <p class="output">Phone: +63 917 457 2531</p>
+                        <p class="output">Status: <span class="status-available">● Available for opportunities</span></p>
+                        <p><span class="prompt">$</span> <span class="command">echo "Let's work together!"</span></p>
+                        <p class="output highlight-output">Let's work together! 🚀</p>
+                        <p><span class="prompt">$</span> <span class="command typing-cursor">_</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="section-tag closing">&lt;/contact&gt;</span>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">&lt;jstn/&gt;</div>
+            <div class="social-links">
+                <a href="mailto:fanglamug26@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.facebook.com/masterjastin.26/" target="_blank" class="social-link" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            <p class="copyright">© 2025 Jastin Lamug. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
