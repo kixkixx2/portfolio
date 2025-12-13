@@ -416,10 +416,10 @@ button {
 /* Scroll Down Hint */
 .scroll-down-hint {
     position: absolute;
-    top: 20px;
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: var(--fs-sm);
+    font-size: var(--fs-lg);
     color: var(--primary);
     text-align: center;
     animation: bounce-down 1.5s ease-in-out infinite;
