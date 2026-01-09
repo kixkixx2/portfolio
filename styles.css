@@ -754,6 +754,7 @@ button {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .grid-lines {
@@ -767,6 +768,7 @@ button {
         linear-gradient(90deg, rgba(0, 245, 212, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
     animation: gridMove 20s linear infinite;
+    pointer-events: none;
 }
 
 @media (max-width: 768px) {
@@ -788,6 +790,7 @@ button {
     animation: float 25s infinite;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     will-change: transform;
+    pointer-events: none;
 }
 
 .floating-shapes span:nth-child(1) {
@@ -982,6 +985,7 @@ button {
     align-items: center;
     padding: calc(80px + var(--space-xl)) 5% var(--space-xl);
     position: relative;
+    z-index: 10;
 }
 
 .hero-content {
@@ -991,11 +995,15 @@ button {
     max-width: 1400px;
     width: 100%;
     gap: var(--space-xl);
+    position: relative;
+    z-index: 10;
 }
 
 .hero-text {
     flex: 1;
     max-width: 600px;
+    position: relative;
+    z-index: 10;
 }
 
 .greeting {
@@ -1164,6 +1172,8 @@ button {
     display: flex;
     gap: var(--space-md);
     flex-wrap: wrap;
+    position: relative;
+    z-index: 100;
 }
 
 /* Hero Social Links */
@@ -1217,6 +1227,8 @@ button {
     overflow: hidden;
     min-height: 50px;
     touch-action: manipulation;
+    z-index: 100;
+    cursor: pointer;
 }
 
 .btn-primary {
