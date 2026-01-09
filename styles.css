@@ -969,10 +969,12 @@ button {
     z-index: 998;
     opacity: 0;
     transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .mobile-menu-overlay.active {
     opacity: 1;
+    pointer-events: auto;
 }
 
 /* ==================== HERO SECTION ==================== */
