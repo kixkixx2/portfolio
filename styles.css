@@ -2713,6 +2713,24 @@ section {
 
 /* ==================== RESPONSIVE - MOBILE ==================== */
 @media (max-width: 768px) {
+    /* Ensure buttons are clickable on mobile */
+    .btn, .project-link, .nav-link, .social-icon, .contact-link {
+        position: relative;
+        z-index: 50;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .cta-buttons {
+        position: relative;
+        z-index: 50;
+    }
+
+    /* Disable 3D effects that may block clicks on mobile */
+    .scene-3d, .floating-cube, .floating-pyramid, .floating-ring, .floating-sphere {
+        display: none !important;
+    }
+
     .nav-links {
         position: fixed;
         top: 0;
