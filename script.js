@@ -257,6 +257,11 @@ function typeWriter() {
     setTimeout(typeWriter, typeSpeed);
 }
 
+// Start typewriter effect
+if (dynamicText) {
+    typeWriter();
+}
+
 // ==================== COUNTER ANIMATION ====================
 const statNumbers = document.querySelectorAll('.stat-number');
 let countersAnimated = false;
