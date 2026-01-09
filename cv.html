@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Jastin Lamug - Curriculum Vitae">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>CV | Jastin Lamug</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cv-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="loaded cv-page">
+    <!-- Particle canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="grid-lines"></div>
+        <div class="floating-shapes">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar visible">
+        <div class="nav-logo">
+            <a href="index.html" class="logo-text">&lt;jstn/&gt;</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link" data-text="Home">Home</a></li>
+            <li><a href="index.html#about" class="nav-link" data-text="About">About</a></li>
+            <li><a href="index.html#projects" class="nav-link" data-text="Projects">Projects</a></li>
+            <li><a href="index.html#skills" class="nav-link" data-text="Skills">Skills</a></li>
+            <li><a href="cv.html" class="nav-link active" data-text="CV">CV</a></li>
+            <li><a href="index.html#contact" class="nav-link" data-text="Contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- CV Section -->
+    <main class="cv-main">
+        <div class="cv-container">
+            <!-- CV Header -->
+            <header class="cv-header" data-aos="fade-up">
+                <div class="cv-header-bg">
+                    <div class="cyber-grid"></div>
+                </div>
+                <div class="cv-header-content">
+                    <div class="cv-photo-wrapper">
+                        <div class="cv-photo-frame">
+                            <img src="jastin hd.jpg" alt="Jastin Lamug" class="cv-photo">
+                        </div>
+                        <div class="cv-photo-glow"></div>
+                    </div>
+                    <div class="cv-header-text">
+                        <span class="cv-tag">&lt;curriculum-vitae&gt;</span>
+                        <h1 class="cv-name">
+                            <span class="first-name glitch" data-text="Jastin">Jastin</span>
+                            <span class="last-name">Lamug</span>
+                        </h1>
+                        <p class="cv-title">Creative Developer & Designer</p>
+                        <div class="cv-contact-bar">
+                            <a href="mailto:jastinlamug26@gmail.com" class="cv-contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>jastinlamug26@gmail.com</span>
+                            </a>
+                            <a href="https://github.com/kixkixx2" target="_blank" class="cv-contact-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jastin-lamug-0253253a4" target="_blank" class="cv-contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cv-download">
+                        <a href="JASTIN CV.pdf" download class="btn btn-primary cv-download-btn">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CV Content Grid -->
+            <div class="cv-grid">
+                <!-- Left Column -->
+                <div class="cv-column cv-left">
+                    <!-- Profile Summary -->
+                    <section class="cv-section" data-aos="fade-right">
+                        <div class="cv-section-header">
+                            <div class="cv-section-icon">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <h2 class="cv-section-title">Profile</h2>
+                        </div>
+                        <div class="cv-section-content">
+                            <p class="cv-profile-text">
+                                A passionate and innovative developer with expertise in machine learning, data science, 
+                                and full-stack development. Dedicated to creating impactful solutions that combine 
+                                cutting-edge technology with elegant design.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Education -->
+                    <section class="cv-section" data-aos="fade-right" data-aos-delay="100">
+                        <div class="cv-section-header">
+                            <div class="cv-section-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h2 class="cv-section-title">Education</h2>
+                        </div>
+                        <div class="cv-section-content">
+                            <div class="cv-timeline">
+                                <div class="cv-timeline-item">
+                                    <div class="cv-timeline-marker"></div>
+                                    <div class="cv-timeline-content">
+                                        <span class="cv-date">2022 - 2026</span>
+                                        <h3 class="cv-item-title">Bachelor of Science in Computer Science</h3>
+                                        <p class="cv-item-subtitle">Isabela State University - Echague Campus</p>
+                                        <p class="cv-item-desc">Major in Data Mining</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Skills -->
+                    <section class="cv-section" data-aos="fade-right" data-aos-delay="200">
+                        <div class="cv-section-header">
+                            <div class="cv-section-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h2 class="cv-section-title">Technical Skills</h2>
+                        </div>
+                        <div class="cv-section-content">
+                            <div class="cv-skills-grid">
+                                <div class="cv-skill-category">
+                                    <h4 class="cv-skill-category-title">
+                                        <i class="fas fa-laptop-code"></i> Programming
+                                    </h4>
+                                    <div class="cv-skill-tags">
+                                        <span class="cv-skill-tag">Python</span>
+                                        <span class="cv-skill-tag">JavaScript</span>
+                                        <span class="cv-skill-tag">HTML/CSS</span>
+                                        <span class="cv-skill-tag">SQL</span>
+                                    </div>
+                                </div>
+                                <div class="cv-skill-category">
+                                    <h4 class="cv-skill-category-title">
+                                        <i class="fas fa-brain"></i> Machine Learning
+                                    </h4>
+                                    <div class="cv-skill-tags">
+                                        <span class="cv-skill-tag">Scikit-learn</span>
+                                        <span class="cv-skill-tag">UMAP</span>
+                                        <span class="cv-skill-tag">K-Means</span>
+                                        <span class="cv-skill-tag">Data Analysis</span>
+                                    </div>
+                                </div>
+                                <div class="cv-skill-category">
+                                    <h4 class="cv-skill-category-title">
+                                        <i class="fas fa-tools"></i> Tools & Others
+                                    </h4>
+                                    <div class="cv-skill-tags">
+                                        <span class="cv-skill-tag">Git</span>
+                                        <span class="cv-skill-tag">VS Code</span>
+                                        <span class="cv-skill-tag">Figma</span>
+                                        <span class="cv-skill-tag">Render</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column -->
+                <div class="cv-column cv-right">
+                    <!-- Experience / Projects -->
+                    <section class="cv-section" data-aos="fade-left">
+                        <div class="cv-section-header">
+                            <div class="cv-section-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h2 class="cv-section-title">Featured Project</h2>
+                        </div>
+                        <div class="cv-section-content">
+                            <div class="cv-project-card">
+                                <div class="cv-project-header">
+                                    <div class="cv-project-icon">
+                                        <i class="fas fa-chart-scatter"></i>
+                                    </div>
+                                    <div class="cv-project-info">
+                                        <h3 class="cv-project-title">K-UMAP Health Analytics</h3>
+                                        <span class="cv-project-type">Thesis Project</span>
+                                    </div>
+                                    <a href="https://k-umap.onrender.com/" target="_blank" class="cv-project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                                <p class="cv-project-desc">
+                                    An enhanced K-UMAP pipeline for analyzing health records at Isabela State University 
+                                    Echague Infirmary. Combines UMAP dimensionality reduction with K-Means clustering 
+                                    for better healthcare insights.
+                                </p>
+                                <div class="cv-project-tech">
+                                    <span>Python</span>
+                                    <span>Scikit-learn</span>
+                                    <span>Data Analysis</span>
+                                    <span>Flask</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Achievements -->
+                    <section class="cv-section" data-aos="fade-left" data-aos-delay="100">
+                        <div class="cv-section-header">
+                            <div class="cv-section-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h2 class="cv-section-title">Achievements</h2>
+                        </div>
+                        <div class="cv-section-content">
+                            <div class="cv-achievements">
+                                <div class="cv-achievement-item">
+                                    <div class="cv-achievement-icon">
+                                        <i class="fas fa-medal"></i>
+                                    </div>
+                                    <div class="cv-achievement-text">
+                                        <h4>Thesis Excellence</h4>
+                                        <p>Successfully deployed K-UMAP project to production</p>
+                                    </div>
+                                </div>
+                                <div class="cv-achievement-item">
+                                    <div class="cv-achievement-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="cv-achievement-text">
+                                        <h4>Dean's Lister</h4>
+                                        <p>Consistent academic excellence throughout university</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Interests -->
+                    <section class="cv-section" data-aos="fade-left" data-aos-delay="200">
+                        <div class="cv-section-header">
+                            <div class="cv-section-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h2 class="cv-section-title">Interests</h2>
+                        </div>
+                        <div class="cv-section-content">
+                            <div class="cv-interests">
+                                <div class="cv-interest-item">
+                                    <i class="fas fa-robot"></i>
+                                    <span>AI & ML</span>
+                                </div>
+                                <div class="cv-interest-item">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <span>UI/UX Design</span>
+                                </div>
+                                <div class="cv-interest-item">
+                                    <i class="fas fa-globe"></i>
+                                    <span>Web Dev</span>
+                                </div>
+                                <div class="cv-interest-item">
+                                    <i class="fas fa-database"></i>
+                                    <span>Data Science</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- CV Footer -->
+            <footer class="cv-footer" data-aos="fade-up">
+                <span class="cv-tag closing">&lt;/curriculum-vitae&gt;</span>
+                <div class="cv-footer-links">
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to Portfolio</span>
+                    </a>
+                    <a href="index.html#contact" class="btn btn-primary">
+                        <span>Contact Me</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple initialization for CV page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show navbar immediately
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.add('visible');
+            
+            // Initialize hamburger menu
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                mobileOverlay.classList.toggle('active');
+            });
+            
+            mobileOverlay.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+            });
+            
+            // Simple scroll animation
+            const observerOptions = {
+                root: null,
+                threshold: 0.1,
+                rootMargin: '0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('[data-aos]').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
