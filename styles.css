@@ -947,6 +947,9 @@ button {
     padding: 10px;
     margin: -10px;
     z-index: 1001;
+    position: relative;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 .hamburger span {
@@ -2760,6 +2763,7 @@ section {
         gap: var(--space-lg);
         transition: right 0.3s ease;
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
     }
 
     .nav-links.active {
