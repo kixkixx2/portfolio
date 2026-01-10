@@ -5,6 +5,17 @@
     overflow-y: auto;
 }
 
+/* Ensure navbar is clickable on CV page */
+.cv-page .navbar {
+    z-index: 10000;
+    pointer-events: auto;
+}
+
+.cv-page .hamburger {
+    pointer-events: auto !important;
+    z-index: 10001 !important;
+}
+
 .cv-main {
     padding-top: 100px;
     min-height: 100vh;
