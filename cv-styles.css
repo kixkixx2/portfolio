@@ -5,7 +5,7 @@
     overflow-y: auto;
 }
 
-/* Ensure navbar is clickable on CV page */
+/* Ensure navbar and mobile menu work on CV page */
 .cv-page .navbar {
     z-index: 10000;
     pointer-events: auto;
@@ -14,6 +14,14 @@
 .cv-page .hamburger {
     pointer-events: auto !important;
     z-index: 10001 !important;
+}
+
+.cv-page .nav-links {
+    z-index: 10002 !important;
+}
+
+.cv-page .mobile-menu-overlay {
+    z-index: 9999 !important;
 }
 
 .cv-main {

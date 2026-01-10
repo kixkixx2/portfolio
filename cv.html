@@ -328,23 +328,6 @@
             const navbar = document.querySelector('.navbar');
             navbar.classList.add('visible');
             
-            // Initialize hamburger menu
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-            const mobileOverlay = document.querySelector('.mobile-menu-overlay');
-            
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                mobileOverlay.classList.toggle('active');
-            });
-            
-            mobileOverlay.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-                mobileOverlay.classList.remove('active');
-            });
-            
             // Simple scroll animation
             const observerOptions = {
                 root: null,
