@@ -244,6 +244,25 @@
                         </div>
                         <div class="cv-section-content">
                             <div class="cv-achievements">
+                                <!-- CSC Eligibility -->
+                                <div class="cv-achievement-item cv-csc-eligibility">
+                                    <div class="cv-achievement-icon csc-icon">
+                                        <i class="fas fa-certificate"></i>
+                                    </div>
+                                    <div class="cv-achievement-text">
+                                        <h4>Civil Service Eligible</h4>
+                                        <p>CSE Professional - Passed March 2024</p>
+                                    </div>
+                                </div>
+                                <div class="cv-csc-proof">
+                                    <a href="#" class="cv-csc-image-link" onclick="openCscLightbox(); return false;">
+                                        <img src="csc.jpg" alt="CSC Professional Eligibility - Passed" class="cv-csc-image">
+                                        <div class="cv-csc-overlay">
+                                            <i class="fas fa-expand"></i>
+                                            <span>View Certificate</span>
+                                        </div>
+                                    </a>
+                                </div>
                                 <div class="cv-achievement-item">
                                     <div class="cv-achievement-icon">
                                         <i class="fas fa-medal"></i>
@@ -315,6 +334,18 @@
         </div>
     </main>
 
+    <!-- CSC Certificate Lightbox -->
+    <div id="csc-lightbox" class="csc-lightbox">
+        <div class="csc-lightbox-backdrop" onclick="closeCscLightbox()"></div>
+        <div class="csc-lightbox-content">
+            <button class="csc-lightbox-close" onclick="closeCscLightbox()" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="csc.jpg" alt="CSC Professional Eligibility - Passed">
+            <p class="csc-lightbox-caption">Civil Service Eligibility - CSE Professional (Passed March 2024)</p>
+        </div>
+    </div>
+
     <!-- Back to Top Button -->
     <button class="back-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
@@ -345,6 +376,24 @@
             
             document.querySelectorAll('[data-aos]').forEach(el => {
                 observer.observe(el);
+            });
+
+            // CSC Lightbox functions
+            window.openCscLightbox = function() {
+                document.getElementById('csc-lightbox').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+
+            window.closeCscLightbox = function() {
+                document.getElementById('csc-lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            // Close lightbox on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeCscLightbox();
+                }
             });
         });
     </script>
